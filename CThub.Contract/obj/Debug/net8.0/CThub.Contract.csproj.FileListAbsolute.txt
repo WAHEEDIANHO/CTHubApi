@@ -1,0 +1,11 @@
+/home/waheedianho/Documents/project/CThub/CThub.Contract/bin/Debug/net8.0/CThub.Contract.deps.json
+/home/waheedianho/Documents/project/CThub/CThub.Contract/bin/Debug/net8.0/CThub.Contract.dll
+/home/waheedianho/Documents/project/CThub/CThub.Contract/bin/Debug/net8.0/CThub.Contract.pdb
+/home/waheedianho/Documents/project/CThub/CThub.Contract/obj/Debug/net8.0/CThub.Contract.GeneratedMSBuildEditorConfig.editorconfig
+/home/waheedianho/Documents/project/CThub/CThub.Contract/obj/Debug/net8.0/CThub.Contract.AssemblyInfoInputs.cache
+/home/waheedianho/Documents/project/CThub/CThub.Contract/obj/Debug/net8.0/CThub.Contract.AssemblyInfo.cs
+/home/waheedianho/Documents/project/CThub/CThub.Contract/obj/Debug/net8.0/CThub.Contract.csproj.CoreCompileInputs.cache
+/home/waheedianho/Documents/project/CThub/CThub.Contract/obj/Debug/net8.0/CThub.Contract.dll
+/home/waheedianho/Documents/project/CThub/CThub.Contract/obj/Debug/net8.0/refint/CThub.Contract.dll
+/home/waheedianho/Documents/project/CThub/CThub.Contract/obj/Debug/net8.0/CThub.Contract.pdb
+/home/waheedianho/Documents/project/CThub/CThub.Contract/obj/Debug/net8.0/ref/CThub.Contract.dll

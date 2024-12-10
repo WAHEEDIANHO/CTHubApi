@@ -1,0 +1,6 @@
+@CThub.Api_HostAddress = http://localhost:5125
+
+GET {{CThub.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

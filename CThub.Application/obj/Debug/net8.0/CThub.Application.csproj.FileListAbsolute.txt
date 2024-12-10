@@ -1,0 +1,17 @@
+/home/waheedianho/Documents/project/CThub/CThub.Application/bin/Debug/net8.0/CThub.Application.deps.json
+/home/waheedianho/Documents/project/CThub/CThub.Application/bin/Debug/net8.0/CThub.Application.dll
+/home/waheedianho/Documents/project/CThub/CThub.Application/bin/Debug/net8.0/CThub.Application.pdb
+/home/waheedianho/Documents/project/CThub/CThub.Application/obj/Debug/net8.0/CThub.Application.GeneratedMSBuildEditorConfig.editorconfig
+/home/waheedianho/Documents/project/CThub/CThub.Application/obj/Debug/net8.0/CThub.Application.AssemblyInfoInputs.cache
+/home/waheedianho/Documents/project/CThub/CThub.Application/obj/Debug/net8.0/CThub.Application.AssemblyInfo.cs
+/home/waheedianho/Documents/project/CThub/CThub.Application/obj/Debug/net8.0/CThub.Application.csproj.CoreCompileInputs.cache
+/home/waheedianho/Documents/project/CThub/CThub.Application/obj/Debug/net8.0/CThub.Application.dll
+/home/waheedianho/Documents/project/CThub/CThub.Application/obj/Debug/net8.0/refint/CThub.Application.dll
+/home/waheedianho/Documents/project/CThub/CThub.Application/obj/Debug/net8.0/CThub.Application.pdb
+/home/waheedianho/Documents/project/CThub/CThub.Application/obj/Debug/net8.0/ref/CThub.Application.dll
+/home/waheedianho/Documents/project/CThub/CThub.Application/bin/Debug/net8.0/CThub.Domain.dll
+/home/waheedianho/Documents/project/CThub/CThub.Application/bin/Debug/net8.0/CThub.Domain.pdb
+/home/waheedianho/Documents/project/CThub/CThub.Application/obj/Debug/net8.0/CThub.Application.csproj.AssemblyReference.cache
+/home/waheedianho/Documents/project/CThub/CThub.Application/obj/Debug/net8.0/CThub.Application.csproj.CopyComplete
+/home/waheedianho/Documents/project/CThub/CThub.Application/bin/Debug/net8.0/CThub.Contract.dll
+/home/waheedianho/Documents/project/CThub/CThub.Application/bin/Debug/net8.0/CThub.Contract.pdb
