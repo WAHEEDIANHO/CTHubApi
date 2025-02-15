@@ -10,10 +10,10 @@ using AuthResponse = CThub.Contract.Authentication.AuthResponse;
 namespace CThub.Api.Controllers;
 
 
-[Route("auth")]
+// [Route("auth")]
 public class AuthenticationController(ISender sender): ApiController
 {
-    [HttpPost("register/rider")]
+    [HttpPost]
     public async Task<IActionResult> RegisterRider(RegisterRequest command)
     {
         var cmd = new RiderRegisterCommand(
@@ -26,7 +26,7 @@ public class AuthenticationController(ISender sender): ApiController
         return Ok(resp);
     }
     
-    [HttpPost("register/driver")]
+    [HttpPost]
     public async Task<IActionResult> RegisterDriver(DriverRegisterRequest command)
     {
         var cmd = new DriverRegisterCommand(
@@ -44,7 +44,7 @@ public class AuthenticationController(ISender sender): ApiController
     }
     
     
-    [HttpPost("login")]
+    [HttpPost]
     public async Task<IActionResult> Login(LoginRequest request)
     {
         // var resp = _authenticationService.Login(request.Email, request.Password);
@@ -52,5 +52,4 @@ public class AuthenticationController(ISender sender): ApiController
         var resp = await sender.Send(cmd);
         return Ok(resp);
     }
-    
 }

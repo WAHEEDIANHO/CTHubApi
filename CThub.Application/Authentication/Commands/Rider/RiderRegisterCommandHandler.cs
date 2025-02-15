@@ -1,7 +1,8 @@
+using CThub.Application.Authentication.Repository;
 using CThub.Application.Common.Authentication;
 using CThub.Application.Common.CQRS;
-using CThub.Application.Common.Persistence.Authentication;
 using CThub.Contract.Authentication;
+using CThub.Domain.ValueObjects;
 using User = CThub.Domain.Models.User;
 
 namespace CThub.Application.Authentication.Commands.Rider;
@@ -16,6 +17,6 @@ public class RiderRegisterCommandHandler(IUserRepository userRepository, IJwtTok
         var user =  User.CreateUser(command.FirstName, command.LastName, command.Email);
         await userRepository.AddUser(user, command.Password);
         var token = jwtToken.GetToken(user);
-        return new AuthResponse(user.FirstName, user.LastName, user.Email, token);
+        return new AuthResponse(user.FirstName, user.LastName, user.Email, token, user.UserRole.ToString(), user.Id);
     }
 }

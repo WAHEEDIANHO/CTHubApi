@@ -2,6 +2,7 @@ namespace CThub.Domain.Enums;
 
 public enum UserRole
 {
-    Rider = 1,
-    Driver = 2
+    User = 1,
+    Rider = 2,
+    Driver = 3
 }

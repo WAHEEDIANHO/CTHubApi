@@ -19,3 +19,4 @@
 /home/waheedianho/Documents/project/CThub/CThub.Infrastructure/obj/Debug/net8.0/CThub.Infrastructure.genruntimeconfig.cache
 /home/waheedianho/Documents/project/CThub/CThub.Infrastructure/bin/Debug/net8.0/CThub.Contract.dll
 /home/waheedianho/Documents/project/CThub/CThub.Infrastructure/bin/Debug/net8.0/CThub.Contract.pdb
+/home/waheedianho/Documents/project/CThub/CThub.Infrastructure/obj/Debug/net8.0/CThub.Infrastructure.sourcelink.json

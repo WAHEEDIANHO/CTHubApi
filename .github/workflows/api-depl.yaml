@@ -1,0 +1,17 @@
+name: CThub-Api-Depl
+on:
+  push:
+    branches: [master]
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+        
+      - name: .Net Env
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0'
+      - run: dotnet restore
+      - run: dotnet build --configuration Release --no-restore

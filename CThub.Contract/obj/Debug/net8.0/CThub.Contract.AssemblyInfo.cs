@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CThub.Contract")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f27a94e3f04190bb2ded633a72c9c26736d7223d")]
 [assembly: System.Reflection.AssemblyProductAttribute("CThub.Contract")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CThub.Contract")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

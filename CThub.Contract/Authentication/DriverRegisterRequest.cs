@@ -1,3 +1,5 @@
+using CThub.Domain.Enums;
+
 namespace CThub.Contract.Authentication;
 
 public record DriverRegisterRequest(
@@ -6,7 +8,7 @@ public record DriverRegisterRequest(
     string LastName,
     string Password,
     string VehincleName,
-    string VehincleType,
+    Vehincle VehincleType,
     string VehincleModel,
     int VehincleCapacity
     );

@@ -1,4 +1,4 @@
-using CThub.Application.Common.Persistence.Authentication;
+using CThub.Application.Authentication.Repository;
 using CThub.Domain.Exceptions;
 using CThub.Domain.Models;
 using CThub.Infrastructure.Data;
@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore;
 namespace CThub.Infrastructure.Persistence;
 
 public class UserRepository(
-    UserDbContext context, 
+    AppDbContext context, 
     UserManager<User> userManager, 
     RoleManager<IdentityRole> roleManager
     ): IUserRepository
@@ -57,6 +57,12 @@ public class UserRepository(
         // userManager
         var user = await userManager.FindByEmailAsync(email);
         return user;
+    }
+
+    public Task<User?> GetUserById(string userId)
+    {
+       return userManager.FindByIdAsync(userId);
+        // return user;
     }
 
     public async Task<bool> CheckPassword(User user, string password)

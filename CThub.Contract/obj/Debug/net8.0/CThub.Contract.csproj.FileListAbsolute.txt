@@ -9,3 +9,8 @@
 /home/waheedianho/Documents/project/CThub/CThub.Contract/obj/Debug/net8.0/refint/CThub.Contract.dll
 /home/waheedianho/Documents/project/CThub/CThub.Contract/obj/Debug/net8.0/CThub.Contract.pdb
 /home/waheedianho/Documents/project/CThub/CThub.Contract/obj/Debug/net8.0/ref/CThub.Contract.dll
+/home/waheedianho/Documents/project/CThub/CThub.Contract/obj/Debug/net8.0/CThub.Contract.sourcelink.json
+/home/waheedianho/Documents/project/CThub/CThub.Contract/bin/Debug/net8.0/CThub.Domain.dll
+/home/waheedianho/Documents/project/CThub/CThub.Contract/bin/Debug/net8.0/CThub.Domain.pdb
+/home/waheedianho/Documents/project/CThub/CThub.Contract/obj/Debug/net8.0/CThub.Contract.csproj.AssemblyReference.cache
+/home/waheedianho/Documents/project/CThub/CThub.Contract/obj/Debug/net8.0/CThub.Contract.csproj.CopyComplete

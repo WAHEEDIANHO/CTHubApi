@@ -3,6 +3,7 @@ using CThub.Domain.ValueObjects;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using Vehincle = CThub.Domain.Enums.Vehincle;
 
 namespace CThub.Infrastructure.Data.Configurations;
 
@@ -16,7 +17,7 @@ public class DriverConfiguration: IEntityTypeConfiguration<Driver>
         //     .HasConversion(
         //         driverId => driverId.Value,
         //         dbId => DriverId.Of(dbId)
-        //     );
+        //     );   
         
         // builder.Property(r => r.UserId)
         //     .HasConversion(
@@ -49,6 +50,10 @@ public class DriverConfiguration: IEntityTypeConfiguration<Driver>
                     .IsRequired();
 
                 vehincleBuilder.Property(v => v.Type)
+                    .HasConversion(
+                            vType => vType.ToString(),
+                            dbVType => (Vehincle)Enum.Parse(typeof(Vehincle), dbVType)
+                        )
                     .HasMaxLength(50)
                     .IsRequired();
             }

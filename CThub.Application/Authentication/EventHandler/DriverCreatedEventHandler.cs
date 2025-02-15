@@ -1,5 +1,5 @@
+using CThub.Application.Authentication.Repository;
 using CThub.Application.Common.Authentication;
-using CThub.Application.Common.Persistence.Authentication;
 using CThub.Domain.Events;
 using CThub.Domain.Models;
 using CThub.Domain.ValueObjects;

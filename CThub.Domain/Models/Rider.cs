@@ -6,6 +6,9 @@ namespace CThub.Domain.Models;
 
 public class Rider: Entity
 {
+    private readonly List<Ride> _rides = new();
+    
+    public IReadOnlyList<Ride> Rides => _rides.AsReadOnly();
     public User User { get; private set; } = default!;
     public string UserId { get; private set; } = default!;
 

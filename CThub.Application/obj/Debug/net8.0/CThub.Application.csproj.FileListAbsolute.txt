@@ -15,3 +15,4 @@
 /home/waheedianho/Documents/project/CThub/CThub.Application/obj/Debug/net8.0/CThub.Application.csproj.CopyComplete
 /home/waheedianho/Documents/project/CThub/CThub.Application/bin/Debug/net8.0/CThub.Contract.dll
 /home/waheedianho/Documents/project/CThub/CThub.Application/bin/Debug/net8.0/CThub.Contract.pdb
+/home/waheedianho/Documents/project/CThub/CThub.Application/obj/Debug/net8.0/CThub.Application.sourcelink.json

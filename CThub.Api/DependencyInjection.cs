@@ -1,5 +1,7 @@
 using CThub.Domain.Abstractions;
 using CThub.Infrastructure.Extensions;
+using CThub.Infrastructure.Hubs;
+using CThub.Infrastructure.RealTime;
 using Microsoft.AspNetCore.Identity;
 
 namespace CThub.Api;
@@ -13,6 +15,17 @@ public static class DependencyInjection
         services.AddControllers();
         // services.AddSqlServer<>()
         // services.AddIdentity<>()
+
+        services.AddCors(opt =>
+        {
+            opt.AddPolicy("AllowAll", build =>
+            {
+                build.AllowAnyOrigin();
+                build.AllowAnyHeader();
+                build.AllowAnyMethod();
+            });
+        });
+        // services.AddSignalR();
         return services;
     }
 
@@ -21,13 +34,15 @@ public static class DependencyInjection
     {
 
         app.UseExceptionHandler("/error");
-        if (app.Environment.IsDevelopment())
+        // if (app.Environment.IsDevelopment())
         {
             app.UseSwagger();
             app.UseSwaggerUI();
         }
+        app.MapHub<NotificationHubClient>("/notification-hub");
         app.UseHttpsRedirection();
         app.MapControllers();
+        app.UseCors("AllowAll");
         return app;
     }
  }

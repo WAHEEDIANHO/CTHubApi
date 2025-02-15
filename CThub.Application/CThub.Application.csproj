@@ -15,7 +15,19 @@
     <PackageReference Include="ErrorOr" Version="2.0.1" />
     <PackageReference Include="FluentValidation" Version="11.10.0" />
     <PackageReference Include="MediatR" Version="12.4.1" />
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.11" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Waheedianho.GenericRepository" Version="1.0.2" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Common\Persistence\Authentication\" />
+  </ItemGroup>
+
+<!--  <ItemGroup>-->
+<!--    <Reference Include="Microsoft.AspNetCore.SignalR.Core">-->
+<!--      <HintPath>..\..\..\..\..\..\usr\lib\dotnet\shared\Microsoft.AspNetCore.App\8.0.12\Microsoft.AspNetCore.SignalR.Core.dll</HintPath>-->
+<!--    </Reference>-->
+<!--  </ItemGroup>-->
 
 </Project>

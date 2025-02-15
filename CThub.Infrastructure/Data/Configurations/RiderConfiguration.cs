@@ -25,5 +25,10 @@ public class RiderConfiguration: IEntityTypeConfiguration<Rider>
         builder.HasOne(r => r.User)
             .WithOne()
             .HasForeignKey<Rider>(r => r.UserId);
+        
+        builder.HasMany(r => r.Rides)
+            .WithOne()
+            .HasForeignKey(r => r.RiderId);
     }
+    
 }

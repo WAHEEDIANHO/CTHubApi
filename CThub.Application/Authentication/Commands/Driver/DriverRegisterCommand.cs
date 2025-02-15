@@ -1,5 +1,6 @@
 using CThub.Application.Common.CQRS;
 using CThub.Contract.Authentication;
+using CThub.Domain.Enums;
 
 namespace CThub.Application.Authentication.Commands.Driver;
 
@@ -9,7 +10,7 @@ public record DriverRegisterCommand(
     string FirstName,
     string LastName,
     string VehincleName,
-    string VehincleType,
+    Vehincle VehincleType,
     string VehincleModel,
     int VehincleCapacity
     ): ICommand<AuthResponse>;

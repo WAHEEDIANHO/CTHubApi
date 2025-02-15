@@ -5,8 +5,8 @@ namespace CThub.Domain.Models;
 
 public class Stop: Aggregate<StopId>
 {
-    private List<PrevStop> _prevStops => new();
-    private List<NextStop> _nextStops => new();
+    private readonly List<PrevStop> _prevStops = new();
+    private readonly List<NextStop> _nextStops = new();
     
     public StopName StopName { get; private set;  }
     public IReadOnlyList<PrevStop> PrevStops => _prevStops.AsReadOnly();

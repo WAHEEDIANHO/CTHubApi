@@ -9,6 +9,6 @@ public record StopName
     public static StopName Of(string value)
     {
         ArgumentNullException.ThrowIfNullOrWhiteSpace(value);
-        return new StopName(value);
+        return new StopName(value.ToLower());
     }
 };
