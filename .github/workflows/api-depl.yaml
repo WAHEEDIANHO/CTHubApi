@@ -38,8 +38,8 @@ jobs:
           host: "${{ secrets.EC2_HOST }}"
           username: "${{ secrets.EC2_USER }}"
           key: "${{ secrets.SSH_PRIVATE_KEY }}"
-          script: |
-            docker stop cthub-app || true
-            docker rm cthub-app || true
-            docker pull "${{ secrets.DOCKER_USERNAME }}"/cthub-app:latest
-            docker run -d -p 80:5125 --name cthub-app "${{ secrets.DOCKER_USERNAME }}"/cthub-app:latests
+#          script: |
+#            docker stop cthub-app || true
+#            docker rm cthub-app || true
+#            docker pull "${{ secrets.DOCKER_USERNAME }}"/cthub-app:latest
+#            docker run -d -p 80:5125 --name cthub-app "${{ secrets.DOCKER_USERNAME }}"/cthub-app:latests
