@@ -49,4 +49,4 @@ jobs:
             docker stop cthub-app || true
             docker rm cthub-app || true
             docker pull "${{ secrets.DOCKER_USERNAME }}"/cthub-app:latest
-            docker run -d -p 80:5125 --name cthub-app "${{ secrets.DOCKER_USERNAME }}"/cthub-app:latests
+            docker run -d -p 80:5125 --name cthub-app "${{ secrets.DOCKER_USERNAME }}"/cthub-app:latest
