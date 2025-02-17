@@ -180,3 +180,4 @@
 /home/waheedianho/Documents/project/CThub/CThub.Api/bin/Debug/net8.0/Google.Apis.Core.dll
 /home/waheedianho/Documents/project/CThub/CThub.Api/bin/Debug/net8.0/System.Management.dll
 /home/waheedianho/Documents/project/CThub/CThub.Api/bin/Debug/net8.0/runtimes/win/lib/net7.0/System.Management.dll
+/home/waheedianho/Documents/project/CThub/CThub.Api/bin/Debug/net8.0/keys/cthub-438d5-firebase-adminsdk-fbsvc-27aeb251e7.json

@@ -45,9 +45,9 @@ public class GetDriverEventHandler(
         
         //deleting schedule and removing driver from queue as well.
         var schedule = await scheduleRepository.GetByPath(notification.route);
-        scheduleRepository.Delete(schedule);
+        if(schedule != null) scheduleRepository.Delete(schedule);
 
-        var driver = await driverQueueRepository.GetByKey(driverId);
-        driverQueueRepository.Delete(driver);
+        var driver = await driverQueueRepository.GetByKey(new Guid(driverId));
+        if(driver != null) driverQueueRepository.Delete(driver);
     }
 }

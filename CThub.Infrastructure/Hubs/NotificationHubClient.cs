@@ -4,10 +4,10 @@ using Microsoft.AspNetCore.SignalR;
 
 namespace CThub.Infrastructure.Hubs;
 
-public sealed class NotificationHubClient: Hub<INotificationHubClient>, INotificationHubServer
+public sealed class NotificationHubClient(INotificationHubServer _hubServer): Hub<INotificationHubClient>
 {
     private static List<Location> _driverLocs = new();
-    private static readonly ConcurrentDictionary<string, string> _userConnections = new();
+    // private static readonly ConcurrentDictionary<string, string> _userConnections = new();
 
     
     public override async Task OnConnectedAsync()
@@ -17,21 +17,22 @@ public sealed class NotificationHubClient: Hub<INotificationHubClient>, INotific
         var httpContext = Context.GetHttpContext(); 
         var userId = httpContext.Request.Query["userId"];
         
-        if (!string.IsNullOrEmpty(userId))
-        {
-            _userConnections[userId] = Context.ConnectionId;  // Map userId to ConnectionId
-        }
+        // if (!string.IsNullOrEmpty(userId))
+        // {
+        //     _userConnections[userId] = Context.ConnectionId;  // Map userId to ConnectionId
+        // }
 
+        _hubServer.MapUserWithId(userId, Context.ConnectionId);
         await Clients.Caller.ReceiveMessage("This is successful connection brodcast");
+        // await Groups.AddToGroupAsync(Context.ConnectionId, "appUser");
         await base.OnConnectedAsync();
-        
     }
 
     public override async Task OnDisconnectedAsync(Exception? exception)
     {
-       var userId =  _userConnections.FirstOrDefault(x => x.Value == Context.ConnectionId).Key;
-       
-       if(!string.IsNullOrEmpty(userId)) _userConnections.TryRemove(userId, out _);
+        _hubServer.RemoveUserWithConnectionId(Context.ConnectionId);
+       // var userId =  _userConnections.FirstOrDefault(x => x.Value == Context.ConnectionId).Key;
+       // if(!string.IsNullOrEmpty(userId)) _userConnections.TryRemove(userId, out _);
         
         await base.OnDisconnectedAsync(exception);
     }
@@ -41,17 +42,7 @@ public sealed class NotificationHubClient: Hub<INotificationHubClient>, INotific
     //     await Task.CompletedTask;
     //     // Clients.Group(route);
     // }
-
-    public Task EmitRideSchedule(string? message)
-    {
-        throw new NotImplementedException();
-    }
-
-    public async Task<string> GetConnectionIdByUserId(string userId)
-    {
-        await Task.CompletedTask;
-        return _userConnections.TryGetValue(userId, out var connectionId) ? connectionId : "Not Found";
-    }
+    
 
     // public async Task SendBroadcast(string user, string message)
     // {
@@ -89,11 +80,7 @@ public sealed class NotificationHubClient: Hub<INotificationHubClient>, INotific
         // Clients.Groups(route);
         Console.WriteLine($"Joined Group {route}");
     }
-
-    public Task JoinWaiterGroup(string connectionId, string grpName)
-    {
-        return Groups.AddToGroupAsync(connectionId, grpName);
-    }
+    
 
     public void SendToGroup(string grpName, string? message)
     {

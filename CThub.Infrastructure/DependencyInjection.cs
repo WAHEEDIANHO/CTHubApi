@@ -15,6 +15,9 @@ using CThub.Infrastructure.Interceptors;
 using CThub.Infrastructure.Notification;
 using CThub.Infrastructure.Persistence;
 using CThub.Infrastructure.Persistence.Cache;
+using FirebaseAdmin;
+using FirebaseAdmin.Messaging;
+using Google.Apis.Auth.OAuth2;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
@@ -28,6 +31,16 @@ public static class DependencyInjection
     public static IServiceCollection AddInfrastructure(this IServiceCollection service, ConfigurationManager configuration)
     {
         //register service to conatiner
+        var firebaseApp = FirebaseApp.Create(new AppOptions
+        {
+            Credential = GoogleCredential.FromFile(Path.Combine(Directory.GetCurrentDirectory(),
+                "keys/cthub-438d5-firebase-adminsdk-fbsvc-27aeb251e7.json"))
+        });
+
+        service.AddSingleton<FirebaseApp>(firebaseApp);
+        service.AddSingleton<FirebaseMessaging>(FirebaseMessaging.DefaultInstance);
+        
+        
         service.AddScoped<ISaveChangesInterceptor, AuditableEntityInterceptors>();
         service.AddScoped<ISaveChangesInterceptor, DispatchDomainEventInterceptor>();
         
@@ -40,11 +53,12 @@ public static class DependencyInjection
         });
         
         Console.WriteLine(configuration.GetConnectionString("Redis") + "connction string");
+        service.AddSignalR();
 
         service.AddHttpClient();
         service.Configure<JwtSetting>(configuration.GetSection(JwtSetting.SectionName));
         service.AddSingleton<IJwtTokenGenerator, JwtTokenGenerator>();      
-        service.AddSingleton<INotificationHubServer, NotificationHubClient>();
+        service.AddSingleton<INotificationHubServer, NotificationHubServer>();
         service.AddScoped<IUserRepository, UserRepository>();
         service.AddScoped<IPrevStopRepository, PrevStopRepository>();
         service.AddScoped<INextStopRepository, NextStopRepository>();
