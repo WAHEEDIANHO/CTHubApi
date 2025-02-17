@@ -34,12 +34,12 @@ jobs:
     steps:
       - name: Deploy to AWS EC2
         uses: appleboy/ssh-action@v0.1.6
-        with: 
-          host: "${{ secrets.EC2_HOST }}"
-          username: "${{ secrets.EC2_USER }}"
-          key: "${{ secrets.SSH_PRIVATE_KEY }}""
-          script: |
-            docker stop cthub-app || true
-            docker rm cthub-app || true
-            docker pull "${{ secrets.DOCKER_USERNAME }}"/cthub-app:latest
-            docker run -d -p 80:5125 --name cthub-app "${{ secrets.DOCKER_USERNAME }}"/cthub-app:latests
+#        with: 
+#          host: "${{ secrets.EC2_HOST }}"
+#          username: "${{ secrets.EC2_USER }}"
+#          key: "${{ secrets.SSH_PRIVATE_KEY }}""
+#          script: |
+#            docker stop cthub-app || true
+#            docker rm cthub-app || true
+#            docker pull "${{ secrets.DOCKER_USERNAME }}"/cthub-app:latest
+#            docker run -d -p 80:5125 --name cthub-app "${{ secrets.DOCKER_USERNAME }}"/cthub-app:latests
