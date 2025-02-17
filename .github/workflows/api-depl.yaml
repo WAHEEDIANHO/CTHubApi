@@ -33,11 +33,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Deploy to AWS EC2
-        uses: appleboy/ssh-action@v0.1.6
-        with: 
-          host: "${{ secrets.EC2_HOST }}"
-          username: "${{ secrets.EC2_USER }}"
-          key: "${{ secrets.SSH_PRIVATE_KEY }}"
+        run: |
+          echo "waheed"
+#        uses: appleboy/ssh-action@v0.1.6
+#        with: 
+#          host: "${{ secrets.EC2_HOST }}"
+#          username: "${{ secrets.EC2_USER }}"
+#          key: "${{ secrets.SSH_PRIVATE_KEY }}"
 #          script: |
 #            docker stop cthub-app || true
 #            docker rm cthub-app || true
