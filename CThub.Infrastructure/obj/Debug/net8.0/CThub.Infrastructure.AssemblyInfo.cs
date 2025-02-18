@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CThub.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+acdebe197f5b31bba5dc68221f225dda701e388c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+06003cbbbb6d75421f9f7398c85b6b1df873ea2a")]
 [assembly: System.Reflection.AssemblyProductAttribute("CThub.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CThub.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

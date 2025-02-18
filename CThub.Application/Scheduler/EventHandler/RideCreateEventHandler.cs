@@ -59,7 +59,7 @@ public class RideCreateEventHandler(
             var connectionId = await notificationHubServer.GetConnectionIdByUserId(command.ride.RiderId);
             var startStop = await stopRepository.GetStopByIdAsync(command.ride.StartStopId);
             var endStop = await stopRepository.GetStopByIdAsync(command.ride.EndStopId);
-            await notificationHubServer.JoinWaiterGroup(connectionId, $"{startStop}->{endStop}");
+            await notificationHubServer.JoinWaiterGroup(connectionId, $"{startStop.StopName}->{endStop.StopName}");
             await mediator.Publish(new GetDriverEvent(newStr, new List<string>() {traceRiderRequestRoute.RiderId}, Domain.Enums.Ride.DROP), cancellationToken);
             return;
         }
